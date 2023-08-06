@@ -1,0 +1,16 @@
+１．初回
+	c build
+	c run --rm rails rails new . --force # インストールとGemfileの更新
+	c build # Gemsをコンテナイメージ内にインストールするため
+	c up
+
+２．再作成
+	rm 次以外(dockerのファイル、Gemfile.bk、このファイル)
+	cp Gemfile.bk Gemfile
+	touch Gemfile.lock
+	１．初回
+
+３．rails　コマンドの実行
+	コンテナに入らずにやる方法(コンテナ名がrc)
+	d exec rc rails g scaffold Note subject:string content:text
+	
