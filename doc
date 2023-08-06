@@ -9,6 +9,7 @@
 	cp Gemfile.bk Gemfile
 	touch Gemfile.lock
 	１．初回
+	※データベースがない場合は d exec rc rails db:migrate
 
 ３．rails　コマンドの実行
 	コンテナに入らずにやる方法(コンテナ名がrc)
