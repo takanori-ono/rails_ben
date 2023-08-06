@@ -1,0 +1,15 @@
+
+<h1>投稿一覧です</h1>
+
+<div class="button_container"><%= link_to "投稿する", new_post_path %></div>
+<ul>
+<% @posts.each do |p| %>
+<h2><%= p.title %></h2>
+<p><%= p.content %></p>
+<span><small><%= p.created_at %></small></span>
+<div class="edit-delete-wrapper">
+<%= link_to "編集", edit_post_path(p), class: "link-button" %>
+<%= button_to "削除", post_path(p), method: :delete, class: "link-delete-button" %>
+</div>
+<% end %>
+</ul>
